@@ -1,0 +1,49 @@
+.sidenav {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  top: 44px;
+  left: 0;
+  background-color: #232323;
+  transition: 0.5s ease;
+  overflow-x: hidden;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-100%);
+}
+
+
+
+
+.sidenav.active {
+  transform: translateX(0);
+
+}
+
+
+
+.nav_windov {
+  display: flex;
+  flex-direction: column;
+  font-size: 23px;
+  padding-top: 100px;
+}
+
+.nav_windov div {
+  padding-top: 70px;
+}
+
+.openbtn {
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+
+@media screen and (max-width: 480px){
+  .sidenav{
+    width: 50%;
+  }
+}

@@ -1,0 +1,23 @@
+.search_card {
+  margin-top: 20px;
+
+}
+
+#cerd {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input_style {
+  display: flex;
+  justify-content: center;
+}
+
+.input_style input {
+  width: 250px;
+}
+
+.input {
+  text-align: center;
+}

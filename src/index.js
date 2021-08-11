@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { slides, description_cards, products } from './massive'
+import { harry_st} from './arcticles'
+import {Provider} from 'react-redux'
+import {store} from './Redux/index'
+
+
+
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<div>Загрузка...</div>}>
+    <Provider store={store} >
+      <App
+        description_cards={description_cards}
+        products={products}
+        harry_st={ harry_st}
+
+      />
+      </Provider>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
